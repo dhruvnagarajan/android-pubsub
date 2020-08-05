@@ -6,9 +6,10 @@ import com.dhruvnagarajan.android.pubsub.entity.Event
 import com.dhruvnagarajan.android.pubsub.persistence.DB
 import com.dhruvnagarajan.android.pubsub.persistence.toEntity
 import com.google.gson.Gson
+import io.reactivex.Single
 
 /**
- * @author Dhruvaraj Nagarajan
+ * @author dhruvaraj nagarajan
  */
 class TopicRepositoryImpl(context: Context) : TopicRepository {
 
@@ -38,9 +39,11 @@ class TopicRepositoryImpl(context: Context) : TopicRepository {
         TODO("not implemented")
     }
 
-    override fun createEvent(event: Event) {
-        dao.insert(event.toEntity())
-    }
+    override fun createEvent(event: Event) =
+        Single.create<Event> {
+            dao.insert(event.toEntity())
+            it.onSuccess(event)
+        }
 
     override fun deleteEvent(timestamp: Long) {
         TODO("not implemented")

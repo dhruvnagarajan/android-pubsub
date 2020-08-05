@@ -4,7 +4,7 @@ import com.dhruvnagarajan.android.pubsub.repository.TopicRepository
 import io.reactivex.Observable
 
 /**
- * @author Dhruvaraj Nagarajan
+ * @author dhruvaraj nagarajan
  */
 class GetEventUseCase(private val topicRepository: TopicRepository) {
 

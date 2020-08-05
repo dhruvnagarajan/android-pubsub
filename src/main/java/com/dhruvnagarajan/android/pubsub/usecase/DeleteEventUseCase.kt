@@ -4,7 +4,7 @@ import com.dhruvnagarajan.android.pubsub.entity.Topic
 import com.dhruvnagarajan.android.pubsub.repository.TopicRepository
 
 /**
- * @author Dhruvaraj Nagarajan
+ * @author dhruvaraj nagarajan
  */
 class DeleteEventUseCase(private val topicRepository: TopicRepository) {
 

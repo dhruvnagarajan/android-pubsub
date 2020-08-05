@@ -1,9 +1,10 @@
 package com.dhruvnagarajan.android.pubsub.repository
 
 import com.dhruvnagarajan.android.pubsub.entity.Event
+import io.reactivex.Single
 
 /**
- * @author Dhruvaraj Nagarajan
+ * @author dhruvaraj nagarajan
  */
 interface TopicRepository {
 
@@ -13,7 +14,7 @@ interface TopicRepository {
 
     fun <T> getEventsAfterMostRecentOccurrence(lastEvent: Event)
 
-    fun createEvent(event: Event)
+    fun createEvent(event: Event): Single<Event>
 
     fun deleteEvent(timestamp: Long)
 }

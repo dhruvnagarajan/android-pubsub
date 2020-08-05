@@ -5,7 +5,7 @@ import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
 
 /**
- * @author Dhruvaraj Nagarajan
+ * @author dhruvaraj nagarajan
  */
 inline fun <reified T> String.fromJsonInline(): T = Gson().fromJson(this, T::class.java)
 

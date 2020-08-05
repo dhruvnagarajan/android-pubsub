@@ -10,7 +10,7 @@ import com.dhruvnagarajan.android.pubsub.entity.TopicMeta
  */
 @Entity
 data class TopicMetaEntity(
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = false)
     val topicName: String,
     val lastEventTime: Long,
     val eventTtlType: String,

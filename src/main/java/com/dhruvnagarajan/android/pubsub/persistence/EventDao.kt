@@ -6,7 +6,7 @@ import androidx.room.Query
 
 
 /**
- * @author Dhruvaraj Nagarajan
+ * @author dhruvaraj nagarajan
  */
 @Dao
 interface EventDao {

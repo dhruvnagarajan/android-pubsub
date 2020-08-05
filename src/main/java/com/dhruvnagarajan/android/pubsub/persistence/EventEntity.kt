@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import com.dhruvnagarajan.android.pubsub.entity.Event
 
 /**
- * @author Dhruvaraj Nagarajan
+ * @author dhruvaraj nagarajan
  */
 @Entity
 data class EventEntity(
